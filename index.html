@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terço Completo - Mistérios e Orações</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background-color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-size: 16px;
+        }
+
+        /* Headers */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3182ce;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 35px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin: 25px 0 15px 0;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #718096;
+            margin: 20px 0 10px 0;
+        }
+
+        /* Paragraphs */
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 20px;
+        }
+
+        /* Mystery groups */
+        .mystery-group {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+        }
+
+        .mystery-group.gozosos {
+            border-left: 6px solid #3182ce;
+            background-color: #ebf8ff;
+        }
+
+        .mystery-group.dolorosos {
+            border-left: 6px solid #e53e3e;
+            background-color: #fed7d7;
+        }
+
+        .mystery-group.gloriosos {
+            border-left: 6px solid #38a169;
+            background-color: #f0fff4;
+        }
+
+        .mystery-group.luminosos {
+            border-left: 6px solid #ed8936;
+            background-color: #fffaf0;
+        }
+
+        .mystery-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .mystery-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a365d;
+        }
+
+        .mystery-days {
+            background-color: #4a5568;
+            color: white;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Mystery items */
+        .mystery-item {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .mystery-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #3182ce;
+            margin-bottom: 10px;
+        }
+
+        .mystery-text {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Bible references */
+        .bible-reference {
+            background-color: #edf2f7;
+            border: 1px solid #cbd5e0;
+            border-left: 4px solid #3182ce;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .bible-reference strong {
+            color: #2b6cb0;
+            font-weight: 700;
+        }
+
+        .bible-verse {
+            color: #4a5568;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* Patristic texts */
+        .patristic-text {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #805ad5;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .patristic-text strong {
+            color: #553c9a;
+            font-weight: 700;
+        }
+
+        .patristic-quote {
+            color: #4a5568;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* Eschatological texts */
+        .eschatological-text {
+            background-color: #fffaf0;
+            border: 1px solid #fed7aa;
+            border-left: 4px solid #ed8936;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        .eschatological-text strong {
+            color: #c05621;
+            font-weight: 700;
+        }
+
+        .eschatological-quote {
+            color: #4a5568;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* Prayer texts */
+        .prayer-text {
+            background-color: #f0fff4;
+            border: 1px solid #c6f6d5;
+            border-left: 4px solid #38a169;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .prayer-text.highlight {
+            background-color: #fef5e7;
+            border-color: #fed7aa;
+            border-left-color: #ed8936;
+        }
+
+        .prayer-text.credo {
+            background-color: #ebf8ff;
+            border-color: #bee3f8;
+            border-left-color: #3182ce;
+        }
+
+        .prayer-text.salve-rainha {
+            background-color: #f0fff4;
+            border-color: #c6f6d5;
+            border-left-color: #38a169;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .alert.note {
+            background-color: #ebf8ff;
+            border-color: #3182ce;
+            color: #2c5282;
+        }
+
+        .alert.important {
+            background-color: #fef5e7;
+            border-color: #ed8936;
+            color: #c05621;
+        }
+
+        .alert.tip {
+            background-color: #f0fff4;
+            border-color: #38a169;
+            color: #276749;
+        }
+
+        /* Tables */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f7fafc;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        td {
+            color: #4a5568;
+        }
+
+        /* Emphasis */
+        strong {
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        em {
+            font-style: italic;
+            color: #718096;
+        }
+
+        .highlight {
+            background-color: #fef5e7;
+            color: #c05621;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Mystery sections */
+        .mystery-section {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .mystery-section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Steps */
+        .steps {
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .steps ol {
+            margin: 0;
+            padding-left: 25px;
+        }
+
+        .steps li {
+            margin-bottom: 12px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Jaculatória */
+        .jaculatoria {
+            background-color: #fef5e7;
+            border: 1px solid #fed7aa;
+            border-left: 4px solid #ed8936;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #c05621;
+            font-style: italic;
+        }
+
+        /* Blockquotes */
+        blockquote {
+            padding: 0 20px;
+            color: #718096;
+            border-left: 4px solid #ed8936;
+            margin: 20px 0;
+            background-color: #fffaf0;
+            border-radius: 0 8px 8px 0;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            color: #718096;
+            font-size: 14px;
+        }
+
+        /* Table of contents */
+        .toc {
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .toc li {
+            margin: 8px 0;
+        }
+
+        .toc a {
+            color: #3182ce;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 0;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .mystery-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                max-width: none;
+                padding: 20px;
+                font-size: 12pt;
+                line-height: 1.5;
+            }
+
+            .mystery-group,
+            .mystery-item,
+            .alert,
+            .bible-reference,
+            .patristic-text,
+            .eschatological-text,
+            .prayer-text,
+            .jaculatoria,
+            .toc,
+            table {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            h1, h2, h3, h4 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            @page {
+                margin: 2cm;
+                size: A4;
+            }
+
+            p {
+                orphans: 3;
+                widows: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Terço Completo - Mistérios e Orações</h1>
+    
+    <div class="description" style="text-align: center; font-style: italic; color: #718096; margin-bottom: 40px; font-size: 18px;">
+        Guia completo para rezar o Santo Terço com todas as orações, mistérios, versículos bíblicos e textos patrísticos
+    </div>
+
+    <!-- Índice -->
+    <div class="toc">
+        <h3 style="color: #2d3748; margin-bottom: 15px;">Índice</h3>
+        <ul>
+            <li><a href="#inicio">Início do Terço</a></li>
+            <li><a href="#preparacao">Preparação</a></li>
+            <li><a href="#misterios">Corpo do Terço</a></li>
+            <li><a href="#gozosos">Mistérios Gozosos</a></li>
+            <li><a href="#dolorosos">Mistérios Dolorosos</a></li>
+            <li><a href="#gloriosos">Mistérios Gloriosos</a></li>
+            <li><a href="#luminosos">Mistérios Luminosos</a></li>
+            <li><a href="#encerramento">Encerramento</a></li>
+        </ul>
+    </div>
+
+    <h2 id="inicio">Início</h2>
+    
+    <div class="prayer-text highlight">
+        <p><strong>Pelo sinal da Santa Cruz,</strong><br>
+        livrai-nos Deus, nosso Senhor, dos nossos inimigos.<br>
+        Em nome do Pai, do Filho e do Espírito Santo. <span class="highlight">Amém.</span></p>
+    </div>
+
+    <h3>Oração de Intenções</h3>
+    
+    <div class="prayer-text">
+        <p>Divino Jesus, eu vos ofereço este Terço que vou rezar<br>
+        Contemplando os mistérios de nossa Redenção.<br>
+        Concedei-me, pela intercessão de Maria, vossa Mãe Santíssima,<br>
+        A quem me dirijo, as graças necessárias para bem rezá-lo<br>
+        E para ganhar as indulgências desta santa devoção.<br>
+        Ofereço particularmente pelas almas dos que amo e estão no purgatório,<br>
+        Pelo livramento dos meus vícios e pela conversão da minha família.</p>
+    </div>
+
+    <h3>Creio (Credo)</h3>
+    
+    <div class="prayer-text credo">
+        <p><strong>Creio em Deus,<br>
+        Pai todo-poderoso,<br>
+        Criador do Céu e da Terra,<br>
+        e em Jesus Cristo,<br>
+        Seu único Filho, Nosso Senhor,<br>
+        que foi concebido pelo poder do Espírito Santo;<br>
+        nasceu da Virgem Maria;<br>
+        padeceu sob Pôncio Pilatos,<br>
+        foi crucificado, morto e sepultado;<br>
+        desceu à mansão dos mortos;<br>
+        ressuscitou ao terceiro dia;<br>
+        subiu aos Céus;<br>
+        está sentado à direita de Deus Pai todo-poderoso,<br>
+        de onde há de vir julgar os vivos e os mortos.</strong></p>
+        
+        <p><strong>Creio no Espírito Santo;<br>
+        na Santa Igreja Católica;<br>
+        na comunhão dos santos;<br>
+        na remissão dos pecados;<br>
+        na ressurreição da carne;<br>
+        na vida eterna. <span class="highlight">Amém.</span></strong></p>
+    </div>
+
+    <h2 id="preparacao">Preparação</h2>
+    
+    <div class="alert important">
+        <div>
+            <strong>Antes dos Mistérios:</strong><br>
+            <strong>1 Pai-Nosso</strong> e <strong>3 Ave-Marias</strong><br>
+            <em>(Em honra da Santíssima Trindade)</em>
+        </div>
+    </div>
+
+    <h2 id="misterios">Corpo do Terço: 5 Mistérios</h2>
+    
+    <div class="mystery-section">
+        <div class="mystery-section-title">Estrutura de cada Mistério</div>
+        
+        <div class="steps">
+            <ol>
+                <li><strong>Anunciar o Mistério</strong> (Ex: "No primeiro Mistério, contemplamos...")</li>
+                <li><strong>1 Pai-Nosso</strong></li>
+                <li><strong>10 Ave-Marias</strong></li>
+                <li><strong>1 Glória ao Pai</strong></li>
+                <li><strong>Jaculatória de Fátima</strong></li>
+            </ol>
+        </div>
+        
+        <div class="jaculatoria">
+            <p><strong>Jaculatória de Fátima:</strong></p>
+            <p><em>Ó meu Jesus, perdoai-nos,<br>
+            livrai-nos do fogo do inferno,<br>
+            levai as almas todas para o céu,<br>
+            e socorrei principalmente as que mais precisarem da Vossa misericórdia.</em></p>
+        </div>
+        
+        <blockquote>
+            <p><strong>Nota:</strong> Repetir essa sequência <strong>5 vezes</strong>, cada vez com um Mistério diferente (Gozosos, Dolorosos, Gloriosos ou Luminosos, conforme o dia da semana).</p>
+        </blockquote>
+    </div>
+
+
+    <!-- Mistérios Gozosos -->
+    <h2 id="gozosos">Mistérios Gozosos</h2>
+    
+    <div class="mystery-group gozosos">
+        <div class="mystery-header">
+            <div class="mystery-title">Mistérios da Alegria e da Esperança</div>
+            <div class="mystery-days">Segunda-feira e Sábado</div>
+        </div>
+        
+        <div class="mystery-item">
+            <div class="mystery-number">1º Mistério Gozoso</div>
+            <div class="mystery-text">A Anunciação do Anjo a Nossa Senhora</div>
+            
+            <div class="bible-reference">
+                <strong>Lucas 1, 26-38</strong>
+                <div class="bible-verse">
+                    "No sexto mês, o anjo Gabriel foi enviado por Deus a uma cidade da Galileia, chamada Nazaré, a uma virgem desposada com um homem que se chamava José, da casa de Davi; e o nome da virgem era Maria. E, entrando o anjo onde ela estava, disse: Salve, agraciada; o Senhor é contigo; bendita és tu entre as mulheres."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Isaías 7, 14</strong>
+                <div class="bible-verse">
+                    "Portanto o mesmo Senhor vos dará um sinal: Eis que a virgem conceberá, e dará à luz um filho, e chamará o seu nome Emanuel."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Jeremias 1, 5</strong>
+                <div class="bible-verse">
+                    "Antes que te formasse no ventre te conheci, e antes que saísses da madre, te santifiquei; às nações te dei por profeta."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "Maria concebeu Cristo primeiro em seu coração pela fé, depois em seu ventre. Sua fé precedeu sua maternidade física, pois ela creu antes de conceber."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "O anjo não disse simplesmente 'conceberás', mas 'conceberás do Espírito Santo', para que não pensasses que seria uma concepção comum, mas soubesses que seria uma obra divina."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A Anunciação marca o início dos tempos messiânicos, quando Deus cumpre suas promessas antigas. Maria, nova Eva, desfaz o 'não' da primeira mulher com seu 'sim' generoso, inaugurando a era da salvação que culminará na Parusia."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">2º Mistério Gozoso</div>
+            <div class="mystery-text">A Visitação de Nossa Senhora a Santa Isabel</div>
+            
+            <div class="bible-reference">
+                <strong>Lucas 1, 39-56</strong>
+                <div class="bible-verse">
+                    "Naqueles dias, Maria se levantou e foi às pressas às montanhas, a uma cidade de Judá. Entrou em casa de Zacarias e saudou Isabel. E aconteceu que, ao ouvir Isabel a saudação de Maria, a criancinha saltou no seu ventre; e Isabel foi cheia do Espírito Santo."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Malaquias 3, 1</strong>
+                <div class="bible-verse">
+                    "Eis que eu envio o meu mensageiro, que preparará o caminho diante de mim; e de repente virá ao seu templo o Senhor, a quem vós buscais."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>2 Samuel 6, 14-16</strong>
+                <div class="bible-verse">
+                    "E Davi saltava com todas as suas forças diante do Senhor... E sucedeu que, entrando a arca do Senhor na cidade de Davi, Mical, filha de Saul, estava olhando pela janela; e, vendo ao rei Davi, que ia saltando e dançando diante do Senhor, o desprezou no seu coração."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Ambrósio</strong>
+                <div class="patristic-quote">
+                    "Vede como Maria, cheia de Deus, não se demora em casa, mas se apressa a ir às montanhas. A graça do Espírito Santo não conhece demoras tardias."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Beda, o Venerável</strong>
+                <div class="patristic-quote">
+                    "João saltou de alegria no ventre materno, reconhecendo a presença de seu Senhor. Assim como Davi saltou diante da Arca da Aliança, João salta diante da verdadeira Arca que é Maria."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A Visitação prefigura o encontro escatológico entre o Antigo e o Novo Testamento. João, último profeta da antiga aliança, reconhece Jesus, inaugurador da nova aliança. Este encontro antecipa a alegria dos eleitos no Reino dos Céus."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">3º Mistério Gozoso</div>
+            <div class="mystery-text">O Nascimento de Jesus em Belém</div>
+            
+            <div class="bible-reference">
+                <strong>Lucas 2, 1-20</strong>
+                <div class="bible-verse">
+                    "E aconteceu naqueles dias que saiu um decreto da parte de César Augusto, para que todo o mundo se alistasse... E deu à luz a seu filho primogênito, e envolveu-o em panos, e deitou-o numa manjedoura, porque não havia lugar para eles na estalagem."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Miqueias 5, 2</strong>
+                <div class="bible-verse">
+                    "E tu, Belém Efrata, posto que pequena entre os milhares de Judá, de ti me sairá o que governará em Israel, e cujas saídas são desde os tempos antigos, desde os dias da eternidade."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>João 1, 14</strong>
+                <div class="bible-verse">
+                    "E o Verbo se fez carne, e habitou entre nós, e vimos a sua glória, como a glória do unigênito do Pai, cheio de graça e de verdade."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Filipenses 2, 6-8</strong>
+                <div class="bible-verse">
+                    "Que, sendo em forma de Deus, não teve por usurpação ser igual a Deus, mas esvaziou-se a si mesmo, tomando a forma de servo, fazendo-se semelhante aos homens; e, achado na forma de homem, humilhou-se a si mesmo."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Vede a sabedoria de Deus: Ele que governa o universo nasce numa manjedoura, Ele que é servido pelos anjos é envolvido em panos. A pobreza do presépio manifesta a riqueza da divindade."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Leão Magno</strong>
+                <div class="patristic-quote">
+                    "O Criador dos tempos nasce no tempo; Aquele que deu o ser a todas as coisas começa a existir; o Invisível se faz visível, o Incompreensível quer ser compreendido."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "O Natal é a primeira vinda de Cristo, que prefigura sua segunda vinda gloriosa. Assim como os pastores foram os primeiros a adorá-lo em sua humildade, os humildes de coração serão os primeiros a reconhecê-lo em sua glória no fim dos tempos."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">4º Mistério Gozoso</div>
+            <div class="mystery-text">A Apresentação do Menino Jesus no Templo</div>
+            
+            <div class="bible-reference">
+                <strong>Lucas 2, 22-40</strong>
+                <div class="bible-verse">
+                    "E, quando os dias da purificação dela se cumpriram, segundo a lei de Moisés, o levaram a Jerusalém, para o apresentarem ao Senhor... E havia em Jerusalém um homem cujo nome era Simeão; e este homem era justo e temente a Deus, esperando a consolação de Israel."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Êxodo 13, 2</strong>
+                <div class="bible-verse">
+                    "Santifica-me todo o primogênito, o que abrir toda a madre entre os filhos de Israel, assim de homens como de animais; meu é."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 Samuel 1, 24-28</strong>
+                <div class="bible-verse">
+                    "E, havendo-o desmamado, o levou consigo... e o trouxe à casa do Senhor, a Siló... Por este menino orava eu; e o Senhor me concedeu a minha petição... Pelo que também ao Senhor eu o entreguei."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "Cristo se submete à Lei não por necessidade, mas por exemplo. Ele que é o Senhor da Lei se faz súdito da Lei para nos ensinar a obediência."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Bernardo de Claraval</strong>
+                <div class="patristic-quote">
+                    "Simeão abraça o Menino e reconhece nele a luz das nações. Seus olhos viram a salvação preparada diante de todos os povos. Que felicidade ter nos braços Aquele que sustenta o universo!"
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A profecia de Simeão sobre a espada que traspassará o coração de Maria aponta para a Paixão, mas também para o julgamento final. Cristo será sinal de contradição até o fim dos tempos, separando os que o aceitam dos que o rejeitam."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">5º Mistério Gozoso</div>
+            <div class="mystery-text">A Perda e o Encontro do Menino Jesus no Templo</div>
+            
+            <div class="bible-reference">
+                <strong>Lucas 2, 41-52</strong>
+                <div class="bible-verse">
+                    "E aconteceu que, passados três dias, o acharam no templo, assentado no meio dos doutores, ouvindo-os, e interrogando-os. E todos os que o ouviam admiravam a sua inteligência e respostas."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 Reis 10, 1-3</strong>
+                <div class="bible-verse">
+                    "E, ouvindo a rainha de Sabá a fama de Salomão... veio prová-lo com perguntas difíceis... E Salomão lhe declarou todas as suas palavras; nenhuma coisa houve que se escondesse ao rei."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Provérbios 20, 5</strong>
+                <div class="bible-verse">
+                    "Como águas profundas são os conselhos no coração do homem, mas o homem entendido os tirará."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Jerônimo</strong>
+                <div class="patristic-quote">
+                    "Jesus aos doze anos já manifestava sua sabedoria divina, mas permanecia obediente aos pais terrenos. Assim nos ensina que a sabedoria verdadeira não dispensa a humildade e a obediência."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Orígenes</strong>
+                <div class="patristic-quote">
+                    "Jesus se encontra no templo, na casa de seu Pai, porque é lá que devemos buscá-lo sempre. Quem busca Jesus com sinceridade, mesmo depois de três dias de angústia, certamente o encontrará."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "Os três dias de busca prefiguram os três dias no sepulcro e apontam para o tempo da Igreja militante, que busca Cristo até sua segunda vinda. A alegria do encontro antecipa a alegria eterna da visão beatífica."
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mistérios Dolorosos -->
+    <h2 id="dolorosos">Mistérios Dolorosos</h2>
+    
+    <div class="mystery-group dolorosos">
+        <div class="mystery-header">
+            <div class="mystery-title">Mistérios da Paixão e Sofrimento</div>
+            <div class="mystery-days">Terça-feira e Sexta-feira</div>
+        </div>
+        
+        <div class="mystery-item">
+            <div class="mystery-number">1º Mistério Doloroso</div>
+            <div class="mystery-text">A Agonia de Jesus no Horto das Oliveiras</div>
+            
+            <div class="bible-reference">
+                <strong>Mateus 26, 36-46</strong>
+                <div class="bible-verse">
+                    "Então chegou Jesus com eles a um lugar chamado Getsêmani, e disse a seus discípulos: Assentai-vos aqui, enquanto vou além orar. E, levando consigo Pedro e os dois filhos de Zebedeu, começou a entristecer-se e a angustiar-se muito."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Hebreus 5, 7-8</strong>
+                <div class="bible-verse">
+                    "O qual, nos dias da sua carne, oferecendo, com grande clamor e lágrimas, orações e súplicas ao que o podia livrar da morte, foi ouvido quanto ao que temia. Ainda que era Filho, aprendeu a obediência, por aquilo que padeceu."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Isaías 53, 3-4</strong>
+                <div class="bible-verse">
+                    "Era desprezado, e o mais rejeitado entre os homens, homem de dores, e experimentado nos trabalhos... Verdadeiramente ele tomou sobre si as nossas enfermidades, e as nossas dores levou sobre si."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Lucas 22, 44</strong>
+                <div class="bible-verse">
+                    "E, posto em agonia, orava mais intensamente; e o seu suor tornou-se como grandes gotas de sangue, que corriam até ao chão."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Damasceno</strong>
+                <div class="patristic-quote">
+                    "Cristo assumiu nossa natureza humana em sua totalidade, inclusive a capacidade de sofrer. Sua agonia no Getsêmani mostra que Ele verdadeiramente experimentou o medo e a angústia humana diante da morte."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "No jardim, Cristo suou sangue por nossos pecados. Cada gota de seu suor precioso foi derramada para lavar nossas culpas e nos reconciliar com o Pai."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A agonia de Cristo prefigura a angústia dos últimos tempos, quando a humanidade enfrentará a grande tribulação. Assim como Cristo venceu pela oração e submissão ao Pai, os fiéis vencerão pela perseverança na fé."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">2º Mistério Doloroso</div>
+            <div class="mystery-text">A Flagelação de Jesus</div>
+            
+            <div class="bible-reference">
+                <strong>Mateus 27, 26</strong>
+                <div class="bible-verse">
+                    "Então lhes soltou Barrabás e, havendo açoitado a Jesus, o entregou para ser crucificado."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Isaías 53, 5</strong>
+                <div class="bible-verse">
+                    "Mas ele foi ferido pelas nossas transgressões, e moído pelas nossas iniquidades; o castigo que nos traz a paz estava sobre ele, e pelas suas pisaduras fomos sarados."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 Pedro 2, 24</strong>
+                <div class="bible-verse">
+                    "Levando ele mesmo em seu corpo os nossos pecados sobre o madeiro, para que, mortos para os pecados, pudéssemos viver para a justiça; e pelas suas feridas fostes sarados."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Salmo 129, 3</strong>
+                <div class="bible-verse">
+                    "Os lavradores araram sobre as minhas costas; compridos fizeram os seus sulcos."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Cada açoite que Cristo recebeu foi um golpe contra nossos pecados. Seu corpo sagrado foi dilacerado para que nossas almas fossem curadas."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Jerônimo</strong>
+                <div class="patristic-quote">
+                    "Cristo, o Cordeiro imaculado, foi flagelado como um criminoso comum. Ele que nunca pecou carregou sobre si o peso de todos os pecados da humanidade."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A flagelação de Cristo antecipa o julgamento final, onde toda injustiça será revelada. Aqueles que flagelaram o Justo enfrentarão o julgamento do Justo Juiz, mas os que contemplam suas feridas com fé encontrarão misericórdia."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">3º Mistério Doloroso</div>
+            <div class="mystery-text">A Coroação de Espinhos</div>
+            
+            <div class="bible-reference">
+                <strong>Mateus 27, 27-31</strong>
+                <div class="bible-verse">
+                    "Então os soldados do presidente, levando Jesus à audiência, reuniram em volta dele toda a coorte. E, despindo-o, o cobriram com uma capa de escarlate; e, tecendo uma coroa de espinhos, puseram-lha na cabeça."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>João 19, 2-3</strong>
+                <div class="bible-verse">
+                    "E os soldados, tecendo uma coroa de espinhos, lha puseram na cabeça, e vestiram-no com uma veste de púrpura. E diziam: Salve, Rei dos judeus. E davam-lhe bofetadas."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Gênesis 3, 18</strong>
+                <div class="bible-verse">
+                    "Espinhos, e cardos também, te produzirá; e comerás a erva do campo."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Salmo 22, 6-7</strong>
+                <div class="bible-verse">
+                    "Mas eu sou verme, e não homem, opróbrio dos homens e desprezado do povo. Todos os que me veem zombam de mim, estendem os lábios e meneiam a cabeça."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Os espinhos que coroaram a cabeça de Cristo são os espinhos do pecado que brotaram da terra amaldiçoada. Cristo os assumiu para transformar nossa maldição em bênção."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "Cristo foi coroado de espinhos para que nós fôssemos coroados de glória. Ele aceitou a coroa da ignomínia para nos dar a coroa da vida eterna."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A falsa realeza de Cristo na Paixão contrasta com sua verdadeira realeza que se manifestará na Parusia. Aqueles que o coroaram de espinhos o verão coroado de glória, e todo joelho se dobrará diante do Rei dos reis."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">4º Mistério Doloroso</div>
+            <div class="mystery-text">Jesus Carrega a Cruz</div>
+            
+            <div class="bible-reference">
+                <strong>João 19, 17</strong>
+                <div class="bible-verse">
+                    "E, levando ele às costas a sua cruz, saiu para o lugar chamado Caveira, que em hebraico se chama Gólgota."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Lucas 23, 26</strong>
+                <div class="bible-verse">
+                    "E, quando o levavam, tomaram um certo Simão, cireneu, que vinha do campo, e puseram-lhe a cruz às costas, para que a levasse após Jesus."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Mateus 16, 24</strong>
+                <div class="bible-verse">
+                    "Então disse Jesus aos seus discípulos: Se alguém quiser vir após mim, renuncie-se a si mesmo, tome sobre si a sua cruz, e siga-me."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Isaías 53, 7</strong>
+                <div class="bible-verse">
+                    "Ele foi oprimido e afligido, mas não abriu a sua boca; como um cordeiro foi levado ao matadouro, e como a ovelha muda perante os seus tosquiadores, assim ele não abriu a sua boca."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Cirilo de Jerusalém</strong>
+                <div class="patristic-quote">
+                    "Cristo carregou a cruz não apenas com o corpo, mas com toda a sua alma. Cada passo no caminho do Calvário foi um ato de amor supremo pela humanidade."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Damasceno</strong>
+                <div class="patristic-quote">
+                    "A cruz que foi instrumento de morte tornou-se árvore da vida. Cristo a carregou para transformar o símbolo da maldição em sinal de salvação."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "O caminho da cruz que Cristo percorreu é o mesmo caminho que a Igreja percorre até o fim dos tempos. Cada cristão deve carregar sua cruz diária, seguindo os passos do Mestre até a glória da ressurreição."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">5º Mistério Doloroso</div>
+            <div class="mystery-text">A Crucificação e Morte de Jesus</div>
+            
+            <div class="bible-reference">
+                <strong>Lucas 23, 33-46</strong>
+                <div class="bible-verse">
+                    "E, quando chegaram ao lugar chamado a Caveira, ali o crucificaram, e aos malfeitores, um à direita e outro à esquerda... E Jesus, clamando com grande voz, disse: Pai, nas tuas mãos entrego o meu espírito. E, havendo dito isto, expirou."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>João 19, 28-30</strong>
+                <div class="bible-verse">
+                    "Depois, sabendo Jesus que já todas as coisas estavam terminadas, para que a Escritura se cumprisse, disse: Tenho sede... Quando, pois, Jesus tomou o vinagre, disse: Está consumado. E, inclinando a cabeça, entregou o espírito."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Salmo 22, 1</strong>
+                <div class="bible-verse">
+                    "Deus meu, Deus meu, por que me desamparaste? Por que te alongas das palavras do meu bramido, e não me auxilias?"
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Isaías 53, 12</strong>
+                <div class="bible-verse">
+                    "Pelo que lhe darei a parte de muitos, e com os poderosos repartirá ele o despojo; porquanto derramou a sua alma na morte, e foi contado com os transgressores; mas ele levou sobre si o pecado de muitos, e intercedeu pelos transgressores."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Na cruz, Cristo reconciliou o céu e a terra. Seus braços estendidos abraçam toda a humanidade, e seu sangue derramado lava todos os pecados do mundo."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "Cristo morreu para que nós vivêssemos. Sua morte foi o preço de nossa redenção, e sua cruz tornou-se a chave que abriu as portas do paraíso."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A morte de Cristo na cruz é o centro da história da salvação. Ela aponta para o julgamento final, onde todos verão Aquele que transpassaram. A cruz será o sinal do Filho do Homem no céu, símbolo de vitória para os salvos e de condenação para os réprobos."
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mistérios Gloriosos -->
+    <h2 id="gloriosos">Mistérios Gloriosos</h2>
+    
+    <div class="mystery-group gloriosos">
+        <div class="mystery-header">
+            <div class="mystery-title">Mistérios da Vitória e da Glória</div>
+            <div class="mystery-days">Quarta-feira e Domingo</div>
+        </div>
+        
+        <div class="mystery-item">
+            <div class="mystery-number">1º Mistério Glorioso</div>
+            <div class="mystery-text">A Ressurreição de Jesus</div>
+            
+            <div class="bible-reference">
+                <strong>Mateus 28, 1-10</strong>
+                <div class="bible-verse">
+                    "E, no fim do sábado, quando já despontava o primeiro dia da semana, Maria Madalena e a outra Maria foram ver o sepulcro... E o anjo, respondendo, disse às mulheres: Não temais vós; pois eu sei que buscais a Jesus, que foi crucificado. Não está aqui, porque já ressuscitou, como havia dito."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 Coríntios 15, 20-22</strong>
+                <div class="bible-verse">
+                    "Mas de fato Cristo ressuscitou dentre os mortos, e foi feito as primícias dos que dormem. Porque assim como a morte veio por um homem, também a ressurreição dos mortos veio por um homem. Porque, assim como todos morrem em Adão, assim também todos serão vivificados em Cristo."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Romanos 6, 4-5</strong>
+                <div class="bible-verse">
+                    "De sorte que fomos sepultados com ele pelo batismo na morte; para que, como Cristo ressuscitou dentre os mortos, pela glória do Pai, assim andemos nós também em novidade de vida. Porque, se fomos plantados juntamente com ele na semelhança da sua morte, também o seremos na da sua ressurreição."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Salmo 16, 10</strong>
+                <div class="bible-verse">
+                    "Pois não deixarás a minha alma no inferno, nem permitirás que o teu Santo veja corrupção."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "A ressurreição de Cristo é o fundamento de nossa fé e a garantia de nossa própria ressurreição. Ele venceu a morte para que nós também pudéssemos vencê-la."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "Cristo ressuscitou não apenas para si, mas para nós. Sua ressurreição é a nossa ressurreição, sua vida é a nossa vida, sua glória é a nossa esperança."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A ressurreição de Cristo é o penhor da ressurreição universal no fim dos tempos. Assim como Ele ressuscitou com corpo glorioso, todos os justos ressuscitarão com corpos gloriosos na Parusia, participando da vida eterna."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">2º Mistério Glorioso</div>
+            <div class="mystery-text">A Ascensão de Jesus ao Céu</div>
+            
+            <div class="bible-reference">
+                <strong>Atos 1, 9-11</strong>
+                <div class="bible-verse">
+                    "E, quando dizia isto, vendo-o eles, foi elevado às alturas, e uma nuvem o recebeu, ocultando-o a seus olhos. E, estando com os olhos fitos no céu, enquanto ele subia, eis que junto deles se puseram dois homens vestidos de branco, os quais lhes disseram: Homens galileus, por que estais olhando para o céu? Esse Jesus, que dentre vós foi recebido em cima no céu, há de vir assim como para o céu o vistes ir."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Efésios 4, 8-10</strong>
+                <div class="bible-verse">
+                    "Por isso diz: Subindo ao alto, levou cativo o cativeiro, e deu dons aos homens. Ora, isto - ele subiu - que é, senão que também antes tinha descido às partes mais baixas da terra? Aquele que desceu é também o mesmo que subiu acima de todos os céus, para cumprir todas as coisas."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Hebreus 9, 24</strong>
+                <div class="bible-verse">
+                    "Porque Cristo não entrou num santuário feito por mãos, figura do verdadeiro, porém no mesmo céu, para agora comparecer por nós perante a face de Deus."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Salmo 47, 5</strong>
+                <div class="bible-verse">
+                    "Deus subiu com júbilo, o Senhor subiu ao som de trombeta."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Leão Magno</strong>
+                <div class="patristic-quote">
+                    "A ascensão de Cristo não foi uma separação, mas uma elevação de nossa natureza humana à glória divina. Onde subiu nossa Cabeça, lá também subirá o Corpo."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Damasceno</strong>
+                <div class="patristic-quote">
+                    "Cristo ascendeu aos céus para preparar lugar para nós e para enviar o Espírito Santo. Sua ascensão é garantia de que também nós ascenderemos com Ele."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A ascensão de Cristo prefigura a ascensão dos eleitos no arrebatamento final. Assim como Ele subiu nas nuvens, os justos serão arrebatados nas nuvens para encontrá-lo nos ares e estar sempre com o Senhor."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">3º Mistério Glorioso</div>
+            <div class="mystery-text">A Vinda do Espírito Santo</div>
+            
+            <div class="bible-reference">
+                <strong>Atos 2, 1-4</strong>
+                <div class="bible-verse">
+                    "E, cumprindo-se o dia de Pentecostes, estavam todos concordemente no mesmo lugar; e de repente veio do céu um som, como de um vento veemente e impetuoso, e encheu toda a casa em que estavam assentados. E foram vistas por eles línguas repartidas, como que de fogo, as quais pousaram sobre cada um deles. E todos foram cheios do Espírito Santo."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>João 14, 16-17</strong>
+                <div class="bible-verse">
+                    "E eu rogarei ao Pai, e ele vos dará outro Consolador, para que fique convosco para sempre; o Espírito de verdade, que o mundo não pode receber, porque não o vê nem o conhece; mas vós o conheceis, porque habita convosco, e estará em vós."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Joel 2, 28-29</strong>
+                <div class="bible-verse">
+                    "E há de ser que, depois derramarei o meu Espírito sobre toda a carne, e vossos filhos e vossas filhas profetizarão, os vossos velhos terão sonhos, os vossos jovens terão visões. E também sobre os servos e sobre as servas naqueles dias derramarei o meu Espírito."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 Coríntios 12, 4-7</strong>
+                <div class="bible-verse">
+                    "Ora, há diversidade de dons, mas o Espírito é o mesmo. E há diversidade de ministérios, mas o Senhor é o mesmo. E há diversidade de operações, mas é o mesmo Deus que opera tudo em todos. Mas a manifestação do Espírito é dada a cada um, para o que for útil."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "O Espírito Santo desceu como fogo para purificar os corações e como vento para impelir os apóstolos à missão. Ele transforma pescadores em pescadores de homens."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Cirilo de Jerusalém</strong>
+                <div class="patristic-quote">
+                    "O Espírito Santo é o Consolador prometido por Cristo. Ele habita em nós, nos santifica e nos prepara para a vida eterna."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "Pentecostes marca o início dos últimos tempos, a era do Espírito que durará até a Parusia. O Espírito Santo prepara a Igreja para o encontro final com Cristo, santificando-a e tornando-a sem mancha nem ruga."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">4º Mistério Glorioso</div>
+            <div class="mystery-text">A Assunção de Nossa Senhora</div>
+            
+            <div class="bible-reference">
+                <strong>Apocalipse 12, 1</strong>
+                <div class="bible-verse">
+                    "E viu-se um grande sinal no céu: uma mulher vestida do sol, tendo a lua debaixo dos seus pés, e uma coroa de doze estrelas sobre a sua cabeça."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Lucas 1, 48-49</strong>
+                <div class="bible-verse">
+                    "Porque atentou na baixeza de sua serva; pois eis que desde agora todas as gerações me chamarão bem-aventurada. Porque me fez grandes coisas o Poderoso; e santo é o seu nome."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Cânticos 2, 10-11</strong>
+                <div class="bible-verse">
+                    "O meu amado fala, e me diz: Levanta-te, amiga minha, formosa minha, e vem. Porque eis que passou o inverno; a chuva cessou, e se foi."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 Coríntios 15, 54</strong>
+                <div class="bible-verse">
+                    "E, quando isto que é corruptível se revestir da incorruptibilidade, e isto que é mortal se revestir da imortalidade, então cumprir-se-á a palavra que está escrita: Tragada foi a morte na vitória."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Damasceno</strong>
+                <div class="patristic-quote">
+                    "Era conveniente que Aquela que conservou sua virgindade intacta na concepção e no parto fosse preservada da corrupção do sepulcro e elevada ao céu em corpo e alma."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Germano de Constantinopla</strong>
+                <div class="patristic-quote">
+                    "Como poderia a morte reter Aquela que foi morada da Vida? Como poderia o sepulcro guardar Aquela que foi templo do Deus vivo?"
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A Assunção de Maria é antecipação da ressurreição final de todos os justos. Ela é as primícias da humanidade redimida, mostrando o destino glorioso que aguarda todos os que perseveram na fé até o fim."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">5º Mistério Glorioso</div>
+            <div class="mystery-text">A Coroação de Nossa Senhora</div>
+            
+            <div class="bible-reference">
+                <strong>Apocalipse 12, 1</strong>
+                <div class="bible-verse">
+                    "E viu-se um grande sinal no céu: uma mulher vestida do sol, tendo a lua debaixo dos seus pés, e uma coroa de doze estrelas sobre a sua cabeça."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Salmo 45, 9-10</strong>
+                <div class="bible-verse">
+                    "Filhas de reis estavam entre as tuas ilustres mulheres; à tua direita estava a rainha ornada de ouro fino de Ofir. Ouve, filha, e olha, e inclina os teus ouvidos; esquece-te do teu povo e da casa de teu pai."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>2 Timóteo 4, 8</strong>
+                <div class="bible-verse">
+                    "Desde agora, a coroa da justiça me está guardada, a qual o Senhor, justo juiz, me dará naquele dia; e não somente a mim, mas também a todos os que amarem a sua vinda."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Provérbios 31, 29</strong>
+                <div class="bible-verse">
+                    "Muitas filhas agiram virtuosamente, mas tu a todas sobrepujas."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Luís Maria Grignion de Montfort</strong>
+                <div class="patristic-quote">
+                    "Maria é Rainha do céu e da terra porque é Mãe do Rei dos reis. Sua realeza é de misericórdia e intercessão, sempre voltada para conduzir as almas a seu Filho."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Bernardo de Claraval</strong>
+                <div class="patristic-quote">
+                    "Maria foi coroada Rainha dos Anjos e dos Santos porque superou a todos em virtude e santidade. Ela é nossa advogada junto ao trono da graça."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A coroação de Maria como Rainha do universo prefigura a glorificação de todos os eleitos no Reino eterno. Ela reina agora como intercessora, mas reinará para sempre como Mãe da família dos salvos na Jerusalém celestial."
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mistérios Luminosos -->
+    <h2 id="luminosos">Mistérios Luminosos</h2>
+    
+    <div class="mystery-group luminosos">
+        <div class="mystery-header">
+            <div class="mystery-title">Mistérios da Luz e da Revelação</div>
+            <div class="mystery-days">Quinta-feira</div>
+        </div>
+        
+        <div class="mystery-item">
+            <div class="mystery-number">1º Mistério Luminoso</div>
+            <div class="mystery-text">O Batismo de Jesus no Rio Jordão</div>
+            
+            <div class="bible-reference">
+                <strong>Mateus 3, 13-17</strong>
+                <div class="bible-verse">
+                    "Então veio Jesus da Galileia ter com João, junto do Jordão, para ser batizado por ele... E, sendo Jesus batizado, saiu logo da água; e eis que se lhe abriram os céus, e viu o Espírito de Deus descendo como pomba e vindo sobre ele. E eis que uma voz dos céus dizia: Este é o meu Filho amado, em quem me comprazo."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>João 1, 29-34</strong>
+                <div class="bible-verse">
+                    "No dia seguinte João viu a Jesus, que vinha para ele, e disse: Eis o Cordeiro de Deus, que tira o pecado do mundo... E João testificou, dizendo: Eu vi o Espírito descer do céu como pomba, e repousar sobre ele."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Isaías 42, 1</strong>
+                <div class="bible-verse">
+                    "Eis aqui o meu servo, a quem sustenho, o meu eleito, em quem se apraz a minha alma; pus o meu espírito sobre ele; ele trará justiça aos gentios."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Romanos 6, 3-4</strong>
+                <div class="bible-verse">
+                    "Ou não sabeis que todos quantos fomos batizados em Jesus Cristo fomos batizados na sua morte? De sorte que fomos sepultados com ele pelo batismo na morte; para que, como Cristo ressuscitou dentre os mortos, pela glória do Pai, assim andemos nós também em novidade de vida."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Cristo não foi batizado porque precisasse de purificação, mas para santificar as águas e nos dar exemplo. Seu batismo inaugurou o sacramento que nos regenera."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "No batismo de Cristo, toda a Trindade se manifesta: o Pai fala, o Filho é batizado, o Espírito desce. É a revelação do mistério divino para a salvação do mundo."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "O batismo de Cristo marca o início de sua missão pública e prefigura o batismo de fogo do julgamento final. Assim como as águas do Jordão foram santificadas, toda a criação será purificada no fim dos tempos."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">2º Mistério Luminoso</div>
+            <div class="mystery-text">As Bodas de Caná</div>
+            
+            <div class="bible-reference">
+                <strong>João 2, 1-11</strong>
+                <div class="bible-verse">
+                    "E ao terceiro dia fizeram-se umas bodas em Caná da Galileia; e estava ali a mãe de Jesus... E disse-lhe sua mãe: Não têm vinho. Disse-lhe Jesus: Mulher, que tenho eu contigo? Ainda não é chegada a minha hora. Sua mãe disse aos serventes: Fazei tudo quanto ele vos disser."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Isaías 25, 6</strong>
+                <div class="bible-verse">
+                    "E o Senhor dos Exércitos fará neste monte, a todos os povos, um banquete de coisas gordurosas, banquete de vinhos puros, de coisas gordurosas e tutanos, e de vinhos puros, bem purificados."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Apocalipse 19, 7-9</strong>
+                <div class="bible-verse">
+                    "Regozijemo-nos, e alegremo-nos, e demos-lhe glória; porque vindas são as bodas do Cordeiro, e já a sua esposa se aprontou... Bem-aventurados aqueles que são chamados à ceia das bodas do Cordeiro."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Salmo 104, 15</strong>
+                <div class="bible-verse">
+                    "E o vinho que alegra o coração do homem, e o azeite que faz reluzir o seu rosto, e o pão que fortalece o coração do homem."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Em Caná, Cristo transformou água em vinho para mostrar que veio transformar nossa natureza humana. O vinho novo do Evangelho supera o vinho velho da Lei."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "O milagre de Caná prefigura a Eucaristia, onde Cristo transforma o vinho em seu Sangue. Maria intercede por nós como intercedeu pelos esposos, obtendo de Jesus o que necessitamos."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "As bodas de Caná prefiguram as bodas eternas do Cordeiro com sua Igreja. O vinho novo que Cristo oferece é símbolo da alegria eterna que os eleitos experimentarão no banquete celestial."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">3º Mistério Luminoso</div>
+            <div class="mystery-text">O Anúncio do Reino de Deus</div>
+            
+            <div class="bible-reference">
+                <strong>Marcos 1, 14-15</strong>
+                <div class="bible-verse">
+                    "E, depois que João foi entregue à prisão, veio Jesus para a Galileia, pregando o evangelho do reino de Deus, e dizendo: O tempo está cumprido, e o reino de Deus está próximo. Arrependei-vos, e crede no evangelho."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Mateus 5, 3-4</strong>
+                <div class="bible-verse">
+                    "Bem-aventurados os pobres de espírito, porque deles é o reino dos céus. Bem-aventurados os que choram, porque eles serão consolados."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Lucas 4, 18-19</strong>
+                <div class="bible-verse">
+                    "O Espírito do Senhor é sobre mim, pois que me ungiu para evangelizar os pobres. Enviou-me a curar os quebrantados do coração, a apregoar liberdade aos cativos, e dar vista aos cegos; a pôr em liberdade os oprimidos; a anunciar o ano aceitável do Senhor."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Daniel 7, 13-14</strong>
+                <div class="bible-verse">
+                    "Eu estava olhando nas minhas visões da noite, e eis que vinha nas nuvens do céu um como o filho do homem... E foi-lhe dado o domínio, e a honra, e o reino, para que todos os povos, nações e línguas o servissem; o seu domínio é um domínio eterno."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Orígenes</strong>
+                <div class="patristic-quote">
+                    "O Reino de Deus que Cristo anuncia não é deste mundo, mas já está presente onde quer que Cristo reine nos corações. É um reino de justiça, paz e alegria no Espírito Santo."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Cristo veio anunciar o Reino não apenas com palavras, mas com obras. Cada milagre, cada cura, cada perdão é um sinal de que o Reino de Deus chegou até nós."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "O Reino anunciado por Cristo tem uma dimensão presente e futura. Já está entre nós pela graça, mas se manifestará plenamente na Parusia, quando Cristo estabelecer seu reino eterno de justiça e paz."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">4º Mistério Luminoso</div>
+            <div class="mystery-text">A Transfiguração de Jesus</div>
+            
+            <div class="bible-reference">
+                <strong>Mateus 17, 1-8</strong>
+                <div class="bible-verse">
+                    "E, seis dias depois, Jesus tomou consigo a Pedro, e a Tiago, e a João seu irmão, e os conduziu em particular a um alto monte, e transfigurou-se diante deles; e o seu rosto resplandeceu como o sol, e as suas vestes se tornaram brancas como a luz."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>2 Pedro 1, 16-18</strong>
+                <div class="bible-verse">
+                    "Porque não vos fizemos saber a virtude e a vinda de nosso Senhor Jesus Cristo, seguindo fábulas artificialmente compostas; mas nós mesmos vimos a sua majestade. Porquanto ele recebeu de Deus Pai honra e glória, quando da magnífica glória lhe foi dirigida uma voz que dizia: Este é o meu Filho amado, em quem me tenho comprazido."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Êxodo 34, 29-30</strong>
+                <div class="bible-verse">
+                    "E aconteceu que, descendo Moisés do monte Sinai... a pele do seu rosto resplandecia, por ter falado com ele. Vendo, pois, Arão e todos os filhos de Israel a Moisés, eis que a pele do seu rosto resplandecia; por isso temeram chegar-se a ele."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 João 3, 2</strong>
+                <div class="bible-verse">
+                    "Amados, agora somos filhos de Deus, e ainda não é manifestado o que havemos de ser. Mas sabemos que, quando ele se manifestar, seremos semelhantes a ele; porque assim como é o veremos."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Damasceno</strong>
+                <div class="patristic-quote">
+                    "Na Transfiguração, Cristo mostrou aos discípulos um vislumbre de sua glória divina, preparando-os para o escândalo da cruz. A glória que viram é a mesma que compartilharemos na ressurreição."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São Leão Magno</strong>
+                <div class="patristic-quote">
+                    "A Transfiguração fortaleceu a fé dos apóstolos e revelou que a Paixão seria voluntária. Cristo mostrou que sua humanidade estava unida à divindade de modo inseparável."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A Transfiguração é antecipação da glória da Parusia. Assim como Cristo se transfigurou diante dos apóstolos, Ele se manifestará em glória a todos os povos no fim dos tempos, e os justos resplandecerão como o sol no Reino do Pai."
+                </div>
+            </div>
+        </div>
+
+        <div class="mystery-item">
+            <div class="mystery-number">5º Mistério Luminoso</div>
+            <div class="mystery-text">A Instituição da Eucaristia</div>
+            
+            <div class="bible-reference">
+                <strong>Mateus 26, 26-28</strong>
+                <div class="bible-verse">
+                    "E, quando comiam, Jesus tomou o pão, e abençoando-o, o partiu, e o deu aos discípulos, e disse: Tomai, comei, isto é o meu corpo. E, tomando o cálice, e dando graças, deu-lho, dizendo: Bebei dele todos; porque isto é o meu sangue do novo testamento, que é derramado por muitos, para remissão dos pecados."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>João 6, 51-58</strong>
+                <div class="bible-verse">
+                    "Eu sou o pão vivo que desceu do céu; se alguém comer deste pão, viverá para sempre; e o pão que eu der é a minha carne, que eu darei pela vida do mundo... Quem come a minha carne e bebe o meu sangue tem a vida eterna; e eu o ressuscitarei no último dia."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>1 Coríntios 11, 23-26</strong>
+                <div class="bible-verse">
+                    "Porque eu recebi do Senhor o que também vos ensinei: que o Senhor Jesus, na noite em que foi traído, tomou o pão... Porque todas as vezes que comerdes este pão e beberdes este cálice anunciais a morte do Senhor, até que venha."
+                </div>
+            </div>
+
+            <div class="bible-reference">
+                <strong>Malaquias 1, 11</strong>
+                <div class="bible-verse">
+                    "Porque desde o nascente do sol até ao poente é grande o meu nome entre os gentios; e em todo o lugar se oferecerá ao meu nome incenso, e uma oferta pura; porque o meu nome é grande entre os gentios, diz o Senhor dos Exércitos."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>São João Crisóstomo</strong>
+                <div class="patristic-quote">
+                    "Na Eucaristia, Cristo se dá totalmente a nós. É o maior milagre do amor divino: Deus se faz alimento para nutrir nossas almas e nos preparar para a vida eterna."
+                </div>
+            </div>
+
+            <div class="patristic-text">
+                <strong>Santo Agostinho</strong>
+                <div class="patristic-quote">
+                    "Recebei o que sois, tornai-vos o que recebeis. Pela Eucaristia, nos tornamos membros do Corpo de Cristo e participamos de sua vida divina."
+                </div>
+            </div>
+
+            <div class="eschatological-text">
+                <strong>Reflexão Escatológica</strong>
+                <div class="eschatological-quote">
+                    "A Eucaristia é penhor da ressurreição e antecipação do banquete celestial. Cada comunhão nos prepara para a comunhão eterna com Cristo no Reino dos Céus, onde O veremos face a face."
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 id="encerramento">Encerramento</h2>
+    
+    <h3>Salve Rainha</h3>
+    
+    <div class="prayer-text salve-rainha">
+        <p><strong>Salve, Rainha, Mãe de misericórdia,<br>
+        vida, doçura e esperança nossa, salve!</strong></p>
+        
+        <p>A Vós bradamos, os degredados filhos de Eva.<br>
+        A Vós suspiramos, gemendo e chorando neste vale de lágrimas.</p>
+        
+        <p>Eia, pois, advogada nossa,<br>
+        esses Vossos olhos misericordiosos a nós volvei.</p>
+        
+        <p>E, depois deste desterro, mostrai-nos Jesus,<br>
+        bendito fruto do Vosso ventre.</p>
+        
+        <p><strong>Ó clemente, ó piedosa,<br>
+        ó doce Virgem Maria.</strong></p>
+        
+        <p><strong>Rogai por nós, Santa Mãe de Deus,<br>
+        para que sejamos dignos das promessas de Cristo.</strong></p>
+    </div>
+
+    <h3>Oração Final</h3>
+    
+    <div class="prayer-text">
+        <p><strong>Ó Deus, cujo Filho único, por sua vida, morte e ressurreição,</strong><br>
+        nos mereceu os prêmios da salvação eterna,<br>
+        concedei-nos, nós vos pedimos,<br>
+        que, meditando estes mistérios do Santíssimo Rosário<br>
+        da bem-aventurada Virgem Maria,<br>
+        imitemos o que eles contêm<br>
+        e alcancemos o que eles prometem.<br>
+        Por Cristo, nosso Senhor. <span class="highlight">Amém.</span></p>
+    </div>
+
+    <!-- Tabela de Distribuição dos Mistérios -->
+    <h3>Distribuição dos Mistérios por Dia da Semana</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Dia da Semana</th>
+                <th>Mistérios</th>
+                <th>Tema</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Segunda-feira</strong></td>
+                <td>Gozosos</td>
+                <td>Alegria e Esperança</td>
+            </tr>
+            <tr>
+                <td><strong>Terça-feira</strong></td>
+                <td>Dolorosos</td>
+                <td>Paixão e Sofrimento</td>
+            </tr>
+            <tr>
+                <td><strong>Quarta-feira</strong></td>
+                <td>Gloriosos</td>
+                <td>Vitória e Glória</td>
+            </tr>
+            <tr>
+                <td><strong>Quinta-feira</strong></td>
+                <td>Luminosos</td>
+                <td>Luz e Revelação</td>
+            </tr>
+            <tr>
+                <td><strong>Sexta-feira</strong></td>
+                <td>Dolorosos</td>
+                <td>Paixão e Sofrimento</td>
+            </tr>
+            <tr>
+                <td><strong>Sábado</strong></td>
+                <td>Gozosos</td>
+                <td>Alegria e Esperança</td>
+            </tr>
+            <tr>
+                <td><strong>Domingo</strong></td>
+                <td>Gloriosos</td>
+                <td>Vitória e Glória</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Orações Básicas -->
+    <h3>Orações Básicas do Terço</h3>
+    
+    <div class="mystery-section">
+        <div class="mystery-section-title">Pai-Nosso</div>
+        <div class="prayer-text">
+            <p>Pai nosso que estais nos céus,<br>
+            santificado seja o vosso nome;<br>
+            venha a nós o vosso reino;<br>
+            seja feita a vossa vontade<br>
+            assim na terra como no céu.<br>
+            O pão nosso de cada dia nos dai hoje;<br>
+            perdoai-nos as nossas ofensas,<br>
+            assim como nós perdoamos<br>
+            a quem nos tem ofendido;<br>
+            e não nos deixeis cair em tentação,<br>
+            mas livrai-nos do mal. <span class="highlight">Amém.</span></p>
+        </div>
+    </div>
+
+    <div class="mystery-section">
+        <div class="mystery-section-title">Ave-Maria</div>
+        <div class="prayer-text">
+            <p>Ave Maria, cheia de graça,<br>
+            o Senhor é convosco;<br>
+            bendita sois vós entre as mulheres,<br>
+            e bendito é o fruto do vosso ventre, Jesus.<br>
+            Santa Maria, Mãe de Deus,<br>
+            rogai por nós, pecadores,<br>
+            agora e na hora da nossa morte. <span class="highlight">Amém.</span></p>
+        </div>
+    </div>
+
+    <div class="mystery-section">
+        <div class="mystery-section-title">Glória ao Pai</div>
+        <div class="prayer-text">
+            <p>Glória ao Pai, ao Filho e ao Espírito Santo,<br>
+            como era no princípio,<br>
+            agora e sempre,<br>
+            pelos séculos dos séculos. <span class="highlight">Amém.</span></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><em>Que a contemplação destes santos mistérios nos conduza à vida eterna.</em></p>
+        <p><strong>Ad Majorem Dei Gloriam</strong></p>
+    </div>
+
+</body>
+</html>
+
